@@ -7,17 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserdataComponent implements OnInit {
   
-  public hello = "hii boy!!";
-  public parastyle = "para";
+  public usernamestyle:string = "username-text";
+  public passwordstyle:string = "password-text";
+  public submitbtn = {
+    submitbtnstyle: true
+  }
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public sayHello():string {
+  public onSave(username:any,password:any):void{
+    console.log(username.value);
+    console.log(password.value);
+  }
 
-    return "Hello function"
-    
+  public onKeyUpUsername(username:any):void{
+    if(username.value.length < 8){
+      console.log("Not In Specofied Format!");
+    }
   }
 
 }

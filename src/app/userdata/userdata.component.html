@@ -1,3 +1,5 @@
-<p [id]="parastyle">userdata works!</p>
-{{hello}}
-{{sayHello()}}
+<label> Username </label>
+<input type="text" #username  [id]="usernamestyle" (keyup)="onKeyUpUsername(username)"/><br/>
+<label> Password </label>
+<input type="text" #password [id]="passwordstyle" /><br/>
+<button on-click="onSave(username,password)" [ngClass]="submitbtn">submit</button>
