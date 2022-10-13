@@ -1,2 +1,8 @@
 <p>list works!</p>
 <h2> Hello {{ parentData }} </h2>
+    <ul>
+      <img src={{gif}} width="100px"/>
+      <p *ngFor="let list of lists">
+      {{ list.header }}
+      </p>
+    </ul>
