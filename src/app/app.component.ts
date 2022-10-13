@@ -8,6 +8,7 @@ import { UserService } from './user.service';
 })
 export class AppComponent implements OnInit {
   public user_list : string[] = [];
+  name = "App Component List Var"
   constructor (private userService: UserService){
 
   }

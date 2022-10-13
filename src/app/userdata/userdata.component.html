@@ -1,5 +1,8 @@
 <label> Username </label>
-<input type="text" #username  [id]="usernamestyle" (keyup)="onKeyUpUsername(username)"/><br/>
+<input type="text" #username [(ngModel)]="usernameDisplay"  [id]="usernamestyle" (keyup)="onKeyUpUsername(username,$event)"/><br/>
 <label> Password </label>
 <input type="text" #password [id]="passwordstyle" /><br/>
 <button on-click="onSave(username,password)" [ngClass]="submitbtn">submit</button>
+<p [id]="errorstyle">{{errorusername}}</p>
+<p>{{usernameDisplay}}</p>
+<h2> {{ birthday | date | uppercase }} </h2>
